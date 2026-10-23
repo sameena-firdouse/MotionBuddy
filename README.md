@@ -7,27 +7,28 @@
 </p>
 
 <p align="center">
-  An AI-powered fitness coaching prototype that uses computer vision
+  An AI-powered fitness coaching application that uses computer vision
   to monitor exercise movements and provide real-time feedback.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Project-AI%20Fitness-7C5CFC?style=for-the-badge" alt="AI Fitness Project"/>
+  <img src="https://img.shields.io/badge/AI-Fitness-7C5CFC?style=for-the-badge" alt="AI Fitness"/>
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Vision-MediaPipe-00A67E?style=for-the-badge" alt="MediaPipe"/>
+  <img src="https://img.shields.io/badge/Computer%20Vision-MediaPipe-00A67E?style=for-the-badge" alt="MediaPipe"/>
+  <img src="https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge" alt="Prototype"/>
 </p>
 
 ---
 
 ## 🌟 What is MotionBuddy?
 
-Exercising at home can be difficult when there is no personal trainer to guide you. People may perform movements incorrectly without realizing it.
+Exercising at home can be challenging when there is no personal trainer to guide you. People may perform movements incorrectly without realizing it.
 
 **MotionBuddy aims to make home workouts more interactive by acting as an AI-assisted workout companion.**
 
-Using a webcam and computer vision, the current prototype detects body landmarks, analyzes squat movements, counts repetitions, and provides spoken posture guidance. A reference exercise video helps users understand the intended movement.
+Using a webcam and computer vision, MotionBuddy detects body landmarks, analyzes squat movements, counts repetitions, and provides spoken posture guidance. A reference exercise video helps users understand the intended movement.
 
-Our vision is to bring this interactive fitness experience to the television through Amazon Fire TV.
+The goal is to make workout guidance more accessible, interactive, and easier to follow.
 
 ---
 
@@ -35,8 +36,8 @@ Our vision is to bring this interactive fitness experience to the television thr
 
 - 🏠 People often exercise at home without professional guidance.
 - 👀 Incorrect exercise posture can go unnoticed.
-- 🔢 Counting repetitions manually can distract users from exercising.
-- 🎥 Watching an exercise video alone does not provide personalized feedback.
+- 🔢 Counting repetitions manually can distract users.
+- 🎥 Watching exercise videos alone does not provide personalized feedback.
 
 ## 💡 Our Solution
 
@@ -70,10 +71,7 @@ Provides spoken instructions to help users correct their movement.
 Lets users observe a reference squat while following the exercise.
 
 ### 📊 6. Movement Comparison
-The prototype includes a reference-based movement comparison workflow intended to assess exercise performance.
-
-### 📺 7. Fire TV Experience — In Progress
-The Android TV application is being developed to bring workout guidance to a larger screen. Full integration with the Python AI prototype has not yet been verified.
+Includes a reference-based movement comparison workflow intended to assess exercise performance.
 
 ---
 
@@ -108,13 +106,11 @@ flowchart TD
 
 | Technology | Purpose |
 |---|---|
-| Python | Core prototype and application logic |
+| Python | Core application logic |
 | MediaPipe Tasks | Body pose and landmark detection |
 | OpenCV | Webcam processing and visual display |
 | NumPy | Numerical calculations for movement analysis |
 | pyttsx3 | Offline text-to-speech feedback |
-| Android Studio | Android TV application development |
-| Kotlin | Android TV application logic |
 
 ---
 
@@ -125,8 +121,7 @@ flowchart TD
 - Windows laptop or PC
 - Python installed
 - Webcam
-- Working microphone/speaker output is not required; speakers or headphones are needed to hear voice feedback
-- The project files listed below
+- Speakers or headphones to hear voice feedback
 
 ### 1. Clone the repository
 
@@ -149,17 +144,15 @@ Activate it in Windows PowerShell:
 
 If PowerShell blocks activation, you can use the environment's Python executable directly instead.
 
-### 3. Install the Python dependencies
+### 3. Install the dependencies
 
 ```bash
 python -m pip install opencv-python mediapipe numpy pyttsx3
 ```
 
-Use the Python version and dependency versions compatible with your existing project if installation fails.
+Use dependency versions compatible with your existing project if installation fails.
 
-### 4. Check the required files
-
-Make sure the Python application can access its required assets:
+### 4. Check the project files
 
 ```text
 MotionBuddy/
@@ -171,7 +164,7 @@ MotionBuddy/
 └── README.md
 ```
 
-The exact repository contents may vary. The pose model, reference video, and reference data must be present at the paths expected by the code.
+Make sure the required model, reference video, and reference data are present at the paths expected by the code.
 
 ### 5. Run MotionBuddy
 
@@ -183,23 +176,6 @@ Allow webcam access if prompted. Stand far enough from the camera for the applic
 
 Follow the on-screen instructions and listen for spoken feedback.
 
-> **Note:** The instructions above describe the Python prototype. The Android TV app requires its own Android Studio build and setup process.
-
----
-
-## 📺 Amazon Fire TV Integration
-
-MotionBuddy is being developed with a TV-based workout experience in mind.
-
-The intended experience includes:
-
-- A TV-friendly workout interface
-- Reference exercise guidance
-- Workout counters and movement feedback
-- Integration with the computer-vision coaching system
-
-**Current status:** The Python prototype works on a laptop. Android TV development has started, but the complete TV-to-AI integration and installation have not yet been verified.
-
 ---
 
 ## 🗺️ Project Roadmap
@@ -210,10 +186,10 @@ The intended experience includes:
 - [x] Spoken feedback
 - [x] Reference squat video and data
 - [x] Initial reference-based movement comparison workflow
-- [ ] Verify live communication between the Python prototype and Android TV app
-- [ ] Complete and test the TV workout experience
-- [ ] Expand support to more exercises
-- [ ] Improve movement analysis and personalized coaching
+- [ ] Improve movement analysis and feedback accuracy
+- [ ] Add support for more exercises
+- [ ] Introduce workout history and progress tracking
+- [ ] Expand personalized coaching capabilities
 
 ---
 
@@ -223,8 +199,8 @@ The intended experience includes:
 - 💃 Guided dance and movement practice
 - 📈 Workout history and progress tracking
 - 🎯 Personalized exercise recommendations
-- 📺 A complete Fire TV workout interface
 - 🗣️ More contextual voice guidance
+- 📊 Improved movement comparison and performance insights
 
 ---
 
@@ -233,7 +209,7 @@ The intended experience includes:
 - Beginners learning basic exercises
 - People exercising at home
 - Users who want visual and spoken guidance
-- People who prefer following workouts on a television
+- People looking for a more interactive workout experience
 
 MotionBuddy is intended to supplement exercise guidance, not replace a qualified fitness professional.
 
@@ -245,7 +221,6 @@ MotionBuddy is intended to supplement exercise guidance, not replace a qualified
 - Pose detection depends on camera visibility, lighting, and body positioning.
 - Posture checks cover selected movement conditions rather than every possible exercise mistake.
 - Movement comparison is an experimental aid and should not be interpreted as a medical or professional form assessment.
-- The complete Fire TV integration is still in progress.
 
 ---
 
