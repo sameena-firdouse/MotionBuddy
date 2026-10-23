@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/Project-AI%20Fitness-7C5CFC?style=for-the-badge" alt="AI Fitness Project"/>
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Vision-MediaPipe-00A67E?style=for-the-badge" alt="MediaPipe"/>
-  <img src="https://img.shields.io/badge/Platform-Fire%20TV%20Planned-FF9900?style=for-the-badge&logo=amazonfiretv&logoColor=white" alt="Fire TV planned"/>
+  <img src="https://img.shields.io/badge/Platform-Fire%20TV%20Planned-FF9900?style=for-the-badge&logo=amazonfiretv&logoColor=white"/>
 </p>
 
 ---
